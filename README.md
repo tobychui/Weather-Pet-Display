@@ -1,4 +1,7 @@
+![](img/banner.png)
+
 # Weather + Desktop Pet Display
+
 A simple weather display with a cute interactive desktop pet  (❛◡❛✿)
 
 ## Introduction

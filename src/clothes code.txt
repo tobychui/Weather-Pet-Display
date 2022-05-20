@@ -1,0 +1,33 @@
+cl1.pic=
+cl2.pic=
+
+
+
+Cloth layer 1
+aph=0 -> 預設
+aph=127 -> 下選
+3  - 巫女
+9  - 白色連衣裙
+10 - 水手服
+11 - 日常帽 T
+
+Cloth layer 2
+aph=0 -> 預設
+aph=127 -> 下選
+4 - 黑襪子
+5 - 黑髮飾
+6 - 白髮飾
+7 - 粉色鞋
+8 - 白襪子
+
+Interaction Commands
+For all commands send by interaction, will start with 0x77 follow by the hex code of action below
+(e.g. TouchHead: 0xF0, whole hex: 0x77 0xF0)
+Touch Head: 0xF0
+Touch Chest: 0xF1
+Touch Skirt: 0xF2
+Touch Tail: 0xF3
+Touch Legs: 0xF4
+Touch Ears: 0xF5
+
+Reset: 0xFF

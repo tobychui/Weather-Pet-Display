@@ -45,6 +45,10 @@ Weather display is like one of the most done Maker project out there, involving 
 
 4. Power it on, then it is done!
 
+### WiFi Setup
+This project uses [WiFi Manager](https://github.com/tzapu/WiFiManager). In which when ESP8266 first bootup, it will starts its own WiFi AP. You can simply connect to the WiFi AP using your phone and configure the ESP8266 to connect to your home network. Once you are done, the ESP8266 will wait for 1 secound and start grabbing weather information and date time information from the ineternet throught your home WiFi network.
+
+
 ## Photos
 
 ![](img/4.jpg)

@@ -178,23 +178,42 @@ int getPageNumber(){
 }
 
 void SendDateTimeChinese(String year, String month, String day){
-  Serial.print("date.txt=\"");
-  Serial.print(year);
-  Serial.write(0xA6); //年
-  Serial.write(0x7E);
+  if (debugMode){
+    Serial.print("date.txt=\"");
+    Serial.print(year);
+    Serial.write(0xA6); //年
+    Serial.write(0x7E);
+    
+    Serial.print(month);
+    Serial.write(0xA4); //月
+    Serial.write(0xEB);
+    
+    Serial.print(day);
+    Serial.write(0xA4); //日
+    Serial.write(0xE9);
   
-  Serial.print(month);
-  Serial.write(0xA4); //月
-  Serial.write(0xEB);
+    Serial.print("\"");
+    Serial.write(0XFF);
+    Serial.write(0XFF);
+    Serial.write(0XFF);
+  }
+  HMISerial.print("date.txt=\"");
+  HMISerial.print(year);
+  HMISerial.write(0xA6); //年
+  HMISerial.write(0x7E);
   
-  Serial.print(day);
-  Serial.write(0xA4); //日
-  Serial.write(0xE9);
+  HMISerial.print(month);
+  HMISerial.write(0xA4); //月
+  HMISerial.write(0xEB);
+  
+  HMISerial.print(day);
+  HMISerial.write(0xA4); //日
+  HMISerial.write(0xE9);
 
-  Serial.print("\"");
-  Serial.write(0XFF);
-  Serial.write(0XFF);
-  Serial.write(0XFF);
+  HMISerial.print("\"");
+  HMISerial.write(0XFF);
+  HMISerial.write(0XFF);
+  HMISerial.write(0XFF);
   delay(100);
 }
 
